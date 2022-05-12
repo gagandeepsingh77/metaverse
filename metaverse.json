@@ -1,0 +1,12 @@
+{
+  "assets": [
+      { "id": "gathering-hall-gltf", "src": "https://xrpanet.s3.us-west-1.amazonaws.com/gathering-hall.glb"},
+      { "id": "gathering-hall-navmesh-gltf", "src": "https://xrpanet.s3.us-west-1.amazonaws.com/gathering-hall-nav-mesh.gltf"}
+  ],
+  "entities": [
+      { "id":"city", "gltf-model": "#gathering-hall-gltf", "scale":"1 1 1", "position":"0 0 0", "shadow":"receive: true; cast: true;"},
+      { "id":"light", "geometry": { "primitive": "light"}, "type":"ambient", "color":"#FFF", "intensity": "1.5", "position":"0 3 0"},
+      { "id":"floor-plan", "class":"navmesh", "gltf-model":"#gathering-hall-navmesh-gltf", "position":"0 0 0", "nav-mesh":""},
+      { "id":"sky", "geometry": { "primitive": "sky"}, "radius":"5000", "material":"fog: false;", "src":"https://xrpanet.s3.us-west-1.amazonaws.com/skybox.jpeg", "scale":""}
+  ]
+}
